@@ -15,4 +15,13 @@ class Customer
   def meals
     Meal.all.select {|meal| meal.customer == self}
   end
+  def waiters
+    array=[]
+    self.meals.each do |meal|
+      array << meal.waiter
+    end
+    array
+  end
+    
+  
 end
