@@ -15,4 +15,8 @@ class Waiter
   def meals
     Meal.all.select {|meal| meal.waiter == self}
   end
+  def best_tipper
+    array=self.meals.sort_by {|meal| meal.tip}
+    array.last.customer
+  end
 end
