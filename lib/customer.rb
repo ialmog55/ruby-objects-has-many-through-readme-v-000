@@ -22,6 +22,6 @@ class Customer
     end
     array
   end
-    
-  
+
+
 end
